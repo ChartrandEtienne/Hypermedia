@@ -5,6 +5,7 @@
    <property name="libdir" value="lib"/>
    <property name="bindir" value="bin"/>
    <property name="distdir" value="jar"/>
+   <property name="distname" value="bienvenue"/> 
    <tstamp prefix="build-info">
 	   <format property="current-date" pattern="d-MMMM-yyyy" locale="en" />
 	   <format property="current-time" pattern="hh:mm:ss a z" locale="en" />
