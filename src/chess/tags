@@ -1,0 +1,61 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Connexion	dao/Connexion.java	/^public class Connexion {$/;"	c
+DB	dao/DB.java	/^public class DB {$/;"	c
+Post	modele/Post.java	/^    public Post() {$/;"	m	class:Post
+Post	modele/Post.java	/^public class Post {$/;"	c
+PostDAO	dao/PostDAO.java	/^public class PostDAO {$/;"	c
+Simple	vue/Simple.java	/^public class Simple extends HttpServlet { $/;"	c
+TestJSP	vue/TestJSP.java	/^public class TestJSP extends HttpServlet { $/;"	c
+Usager	modele/Usager.java	/^public class Usager {$/;"	c
+babillard.dao	dao/Connexion.java	/^package babillard.dao;$/;"	p
+babillard.dao	dao/DB.java	/^package babillard.dao;$/;"	p
+babillard.dao	dao/PostDAO.java	/^package babillard.dao;$/;"	p
+babillard.modele	modele/Post.java	/^package  babillard.modele;$/;"	p
+babillard.modele	modele/Usager.java	/^package  babillard.modele;$/;"	p
+babillard.vue	vue/Simple.java	/^package babillard.vue;$/;"	p
+babillard.vue	vue/TestJSP.java	/^package babillard.vue;$/;"	p
+close	dao/Connexion.java	/^	public static void close()$/;"	m	class:Connexion
+cnx	dao/Connexion.java	/^	private static Connection cnx;$/;"	f	class:Connexion	file:
+commentaire	modele/Post.java	/^    private String commentaire;$/;"	f	class:Post	file:
+doGet	vue/Simple.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:Simple
+doGet	vue/TestJSP.java	/^	public void doGet(HttpServletRequest requete, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:TestJSP
+doPost	vue/Simple.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:Simple
+getCommentaire	modele/Post.java	/^    public String getCommentaire() {$/;"	m	class:Post
+getId	modele/Post.java	/^    public int getId() {$/;"	m	class:Post
+getId	modele/Usager.java	/^    public int getId() {$/;"	m	class:Usager
+getInstance	dao/Connexion.java	/^	public static Connection getInstance()$/;"	m	class:Connexion
+getInstance	dao/DB.java	/^    public static Connection getInstance() {$/;"	m	class:DB
+getNom	modele/Usager.java	/^    public String getNom() {$/;"	m	class:Usager
+getPassword	modele/Usager.java	/^    public String getPassword() {$/;"	m	class:Usager
+getPostsId	dao/PostDAO.java	/^    public static List<Post> getPostsId(int id) {$/;"	m	class:PostDAO
+getTags	modele/Post.java	/^    public ArrayList<String> getTags() {$/;"	m	class:Post
+getTagsGroupe	modele/Post.java	/^    public ArrayList<String> getTagsGroupe() {$/;"	m	class:Post
+getTitre	modele/Post.java	/^    public String getTitre() {$/;"	m	class:Post
+getUrl	dao/Connexion.java	/^	public static String getUrl() {$/;"	m	class:Connexion
+getUsager	modele/Post.java	/^    public int getUsager() {$/;"	m	class:Post
+getUser	dao/Connexion.java	/^	public static String getUser() {$/;"	m	class:Connexion
+id	modele/Post.java	/^    private int id;$/;"	f	class:Post	file:
+id	modele/Usager.java	/^    private int id;$/;"	f	class:Usager	file:
+nom	modele/Usager.java	/^    private String nom;$/;"	f	class:Usager	file:
+password	dao/Connexion.java	/^				user = "", password="";$/;"	f	class:Connexion	file:
+password	modele/Usager.java	/^    private String password;$/;"	f	class:Usager	file:
+reinit	dao/Connexion.java	/^	public static void reinit()$/;"	m	class:Connexion
+setCommentaire	modele/Post.java	/^    public void setCommentaire (String _commentaire) {$/;"	m	class:Post
+setPassword	dao/Connexion.java	/^	public static void setPassword(String password) {$/;"	m	class:Connexion
+setTags	modele/Post.java	/^    public void setTags(ArrayList<String> _tags) {$/;"	m	class:Post
+setTagsGroupe	modele/Post.java	/^    public void setTagsGroupe(ArrayList<String> _tagsGroupe) {$/;"	m	class:Post
+setTitre	modele/Post.java	/^    public void setTitre(String _titre) {$/;"	m	class:Post
+setUrl	dao/Connexion.java	/^	public static void setUrl(String url) {$/;"	m	class:Connexion
+setUser	dao/Connexion.java	/^	public static void setUser(String user) {$/;"	m	class:Connexion
+tags	modele/Post.java	/^    private ArrayList<String> tags;$/;"	f	class:Post	file:
+tagsGroupe	modele/Post.java	/^    private ArrayList<String> tagsGroupe;$/;"	f	class:Post	file:
+titre	modele/Post.java	/^    private String titre;$/;"	f	class:Post	file:
+url	dao/Connexion.java	/^	private static String 	url,$/;"	f	class:Connexion	file:
+url	modele/Post.java	/^    private String url;$/;"	f	class:Post	file:
+usager	modele/Post.java	/^    private int usager;$/;"	f	class:Post	file:
+user	dao/Connexion.java	/^				user = "", password="";$/;"	f	class:Connexion	file:

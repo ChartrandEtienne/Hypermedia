@@ -1,0 +1,50 @@
+<web-app version="2.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xsi:schemalocation="http:/java.sun.com/dtd/web-app_2_3.dtd">
+	<servlet>
+		<servlet-name>InitSalon</servlet-name>
+		<servlet-class>chess.vue.InitSalon</servlet-class>
+<!--		<jsp-file>/InitSalon.jsp</jsp-file> je suis un CON -->
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>InitSalon</servlet-name>
+		<url-pattern>/InitSalon</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetUserId</servlet-name>
+		<servlet-class>chess.vue.GetUserId</servlet-class>
+<!--		<jsp-file>/GetUserId.jsp</jsp-file> je suis un CON -->
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetUserId</servlet-name>
+		<url-pattern>/GetUserId</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SetUserId</servlet-name>
+		<servlet-class>chess.vue.SetUserId</servlet-class>
+<!--		<jsp-file>/SetUserId.jsp</jsp-file> je suis un CON -->
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SetUserId</servlet-name>
+		<url-pattern>/SetUserId</url-pattern>
+	</servlet-mapping>
+
+<!--
+	<servlet>
+		<servlet-name>Simple</servlet-name>
+		<servlet-class>babillard.vue.Simple</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Simple</servlet-name>
+		<url-pattern>/Simple</url-pattern>
+	</servlet-mapping>
+    -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>

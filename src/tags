@@ -1,0 +1,109 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Cavalier	entite/Cavalier.java	/^	public Cavalier(String couleur) {$/;"	m	class:Cavalier
+Cavalier	entite/Cavalier.java	/^public class Cavalier extends Piece {$/;"	c
+Colonne	entite/Position.java	/^	int Colonne;$/;"	f	class:Position
+Echiquier	entite/Echiquier.java	/^    public Echiquier() $/;"	m	class:Echiquier
+Echiquier	entite/Echiquier.java	/^public class Echiquier {$/;"	c
+Fou	entite/Fou.java	/^	public Fou(String couleur) {$/;"	m	class:Fou
+Fou	entite/Fou.java	/^public class Fou extends Piece{$/;"	c
+Partie	entite/Partie.java	/^	public Partie() $/;"	m	class:Partie
+Partie	entite/Partie.java	/^	public Partie(Echiquier e) $/;"	m	class:Partie
+Partie	entite/Partie.java	/^public class Partie {$/;"	c
+Piece	entite/Piece.java	/^public  abstract class Piece {$/;"	c
+Pion	entite/Pion.java	/^	public Pion(String couleur)$/;"	m	class:Pion
+Pion	entite/Pion.java	/^public class Pion extends Piece {$/;"	c
+Position	entite/Position.java	/^	public Position(int x, int y ) {$/;"	m	class:Position
+Position	entite/Position.java	/^public class Position {$/;"	c
+Reine	entite/Reine.java	/^	public Reine(String couleur) {$/;"	m	class:Reine
+Reine	entite/Reine.java	/^public class Reine extends Piece {$/;"	c
+Roi	entite/Roi.java	/^	public Roi(String couleur){$/;"	m	class:Roi
+Roi	entite/Roi.java	/^public class Roi extends Piece {$/;"	c
+Simple	chess/vue/Simple.java	/^public class Simple extends HttpServlet { $/;"	c
+TestJSP	chess/vue/TestJSP.java	/^public class TestJSP extends HttpServlet { $/;"	c
+Tour	entite/Tour.java	/^	public Tour(String couleur)$/;"	m	class:Tour
+Tour	entite/Tour.java	/^public class Tour extends Piece{$/;"	c
+Utilisateur	entite/Utilisateur.java	/^	public Utilisateur(String n, String m)$/;"	m	class:Utilisateur
+Utilisateur	entite/Utilisateur.java	/^	public Utilisateur(String n, String m, String c, boolean connecte, boolean play, boolean invit)$/;"	m	class:Utilisateur
+Utilisateur	entite/Utilisateur.java	/^        public Utilisateur(String n, String m, String c){$/;"	m	class:Utilisateur
+Utilisateur	entite/Utilisateur.java	/^public class Utilisateur {$/;"	c
+chess.vue	chess/vue/Simple.java	/^package chess.vue;$/;"	p
+chess.vue	chess/vue/TestJSP.java	/^package chess.vue;$/;"	p
+com.STI.entite	entite/Cavalier.java	/^package com.STI.entite;$/;"	p
+com.STI.entite	entite/Echiquier.java	/^package com.STI.entite;$/;"	p
+com.STI.entite	entite/Fou.java	/^package com.STI.entite;$/;"	p
+com.STI.entite	entite/Partie.java	/^package com.STI.entite;$/;"	p
+com.STI.entite	entite/Piece.java	/^package com.STI.entite;$/;"	p
+com.STI.entite	entite/Pion.java	/^package com.STI.entite;$/;"	p
+com.STI.entite	entite/Position.java	/^package com.STI.entite;$/;"	p
+com.STI.entite	entite/Reine.java	/^package com.STI.entite;$/;"	p
+com.STI.entite	entite/Roi.java	/^package com.STI.entite;$/;"	p
+com.STI.entite	entite/Tour.java	/^package com.STI.entite;$/;"	p
+com.STI.entite	entite/Utilisateur.java	/^package com.STI.entite;$/;"	p
+connecte	entite/Utilisateur.java	/^        boolean connecte;$/;"	f	class:Utilisateur
+couleur	entite/Piece.java	/^   String couleur;$/;"	f	class:Piece
+courriel	entite/Utilisateur.java	/^	String courriel;$/;"	f	class:Utilisateur
+deplacer	entite/Echiquier.java	/^	public boolean deplacer( Position posB)$/;"	m	class:Echiquier
+doGet	chess/vue/Simple.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:Simple
+doGet	chess/vue/TestJSP.java	/^	public void doGet(HttpServletRequest requete, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:TestJSP
+doPost	chess/vue/Simple.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:Simple
+equals	entite/Utilisateur.java	/^        public boolean equals(Object x)$/;"	m	class:Utilisateur
+get	entite/Echiquier.java	/^        public Piece get(int i, int j)$/;"	m	class:Echiquier
+getColonne	entite/Position.java	/^	public int getColonne() {$/;"	m	class:Position
+getCouleur	entite/Piece.java	/^    public String getCouleur() {$/;"	m	class:Piece
+getCourriel	entite/Utilisateur.java	/^    public String getCourriel() {$/;"	m	class:Utilisateur
+getId	entite/Utilisateur.java	/^	public int getId() {$/;"	m	class:Utilisateur
+getLigne	entite/Position.java	/^	public int getLigne() {$/;"	m	class:Position
+getListPieces	entite/Echiquier.java	/^    public Piece[][] getListPieces() {$/;"	m	class:Echiquier
+getMdp	entite/Utilisateur.java	/^    public String getMdp() {$/;"	m	class:Utilisateur
+getName	entite/Utilisateur.java	/^	public String getName() {$/;"	m	class:Utilisateur
+getPosPieceCourante	entite/Echiquier.java	/^    public Position getPosPieceCourante() {$/;"	m	class:Echiquier
+getTable	entite/Partie.java	/^    public Echiquier getTable() {$/;"	m	class:Partie
+id	entite/Utilisateur.java	/^	int id;$/;"	f	class:Utilisateur
+invit	entite/Utilisateur.java	/^        boolean invit;$/;"	f	class:Utilisateur
+isConnecte	entite/Utilisateur.java	/^    public boolean isConnecte() {$/;"	m	class:Utilisateur
+isInvit	entite/Utilisateur.java	/^    public boolean isInvit() {$/;"	m	class:Utilisateur
+isPlay	entite/Utilisateur.java	/^    public boolean isPlay() {$/;"	m	class:Utilisateur
+jouer	entite/Utilisateur.java	/^        public boolean jouer(Partie p)$/;"	m	class:Utilisateur
+ligne	entite/Position.java	/^	int ligne; $/;"	f	class:Position
+listPieces	entite/Echiquier.java	/^    Piece[][] listPieces = new Piece[8][8];$/;"	f	class:Echiquier
+manger	entite/Cavalier.java	/^	public boolean manger(Position posDepart, Position posFinal) {$/;"	m	class:Cavalier
+manger	entite/Fou.java	/^	public boolean manger(Position posDepart, Position posFinal) {$/;"	m	class:Fou
+manger	entite/Piece.java	/^   public abstract boolean manger(Position posDepart, Position posFinal);$/;"	m	class:Piece
+manger	entite/Pion.java	/^	public boolean manger(Position posDepart, Position posFinal) {$/;"	m	class:Pion
+manger	entite/Reine.java	/^	public boolean manger(Position posDepart, Position posFinal) {$/;"	m	class:Reine
+manger	entite/Roi.java	/^	public boolean manger(Position posDepart, Position posFinal) {$/;"	m	class:Roi
+manger	entite/Tour.java	/^	public boolean manger(Position posDepart, Position posFinal) {$/;"	m	class:Tour
+max	entite/Echiquier.java	/^	int max= 8;$/;"	f	class:Echiquier
+mdp	entite/Utilisateur.java	/^        String mdp;$/;"	f	class:Utilisateur
+name	entite/Utilisateur.java	/^	String name;$/;"	f	class:Utilisateur
+partie	entite/Utilisateur.java	/^	Partie[] partie;$/;"	f	class:Utilisateur
+play	entite/Utilisateur.java	/^        boolean play;$/;"	f	class:Utilisateur
+posPieceCourante	entite/Echiquier.java	/^    Position posPieceCourante;$/;"	f	class:Echiquier
+selectionnee	entite/Echiquier.java	/^	public void selectionnee(Position pos)$/;"	m	class:Echiquier
+setColonne	entite/Position.java	/^	public void setColonne(int colonne) {$/;"	m	class:Position
+setConnecte	entite/Utilisateur.java	/^    public void setConnecte(boolean connecte) {$/;"	m	class:Utilisateur
+setCourriel	entite/Utilisateur.java	/^    public void setCourriel(String courriel) {$/;"	m	class:Utilisateur
+setId	entite/Utilisateur.java	/^	public void setId(int id) {$/;"	m	class:Utilisateur
+setInvit	entite/Utilisateur.java	/^    public void setInvit(boolean invit) {$/;"	m	class:Utilisateur
+setLigne	entite/Position.java	/^	public void setLigne(int ligne) {$/;"	m	class:Position
+setListPieces	entite/Echiquier.java	/^    public void setListPieces(Piece[][] listPieces) {$/;"	m	class:Echiquier
+setMdp	entite/Utilisateur.java	/^    public void setMdp(String mdp) {$/;"	m	class:Utilisateur
+setName	entite/Utilisateur.java	/^	public void setName(String name) {$/;"	m	class:Utilisateur
+setPlay	entite/Utilisateur.java	/^    public void setPlay(boolean play) {$/;"	m	class:Utilisateur
+setPosPieceCourante	entite/Echiquier.java	/^    public void setPosPieceCourante(Position posPieceCourante) {$/;"	m	class:Echiquier
+setTable	entite/Partie.java	/^    public void setTable(Echiquier table) {$/;"	m	class:Partie
+table	entite/Partie.java	/^     Echiquier table;$/;"	f	class:Partie
+toString	entite/Position.java	/^	public String toString()$/;"	m	class:Position
+validerDep	entite/Cavalier.java	/^	public boolean validerDep(Position posDepart, Position posFinal) {$/;"	m	class:Cavalier
+validerDep	entite/Fou.java	/^	public boolean validerDep(Position posDepart, Position posFinal) {$/;"	m	class:Fou
+validerDep	entite/Piece.java	/^   public abstract boolean validerDep(Position posDepart, Position posFinal);$/;"	m	class:Piece
+validerDep	entite/Pion.java	/^	public boolean validerDep(Position posDepart, Position posFinal) {$/;"	m	class:Pion
+validerDep	entite/Reine.java	/^	public boolean validerDep(Position posDepart, Position posFinal) {$/;"	m	class:Reine
+validerDep	entite/Roi.java	/^	public boolean validerDep(Position posDepart, Position posFinal) {$/;"	m	class:Roi
+validerDep	entite/Tour.java	/^	public boolean validerDep(Position posDepart, Position posFinal) {$/;"	m	class:Tour
+validerEchec	entite/Piece.java	/^   public boolean validerEchec(Position posFinal)$/;"	m	class:Piece

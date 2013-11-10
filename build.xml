@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<project name="Chess" default="build" basedir=".">
+   <property name="projectName" value="Chess"/>
+   <property name="srcdir" value="src"/>
+   <property name="libdir" value="lib"/>
+   <property name="bindir" value="bin"/>
+   <property name="distdir" value="jar"/>
+   <property name="distname" value="${projectName}"/>
+   <property name="warfile" value="${projectName}.war"/>
+   <property name="webdir" value="web"/>
+   <property name="webxml" value="web/WEB-INF/web.xml"/>
+   <tstamp prefix="build-info">
+	   <format property="current-date" pattern="d-MMMM-yyyy" locale="en" />
+	   <format property="current-time" pattern="hh:mm:ss a z" locale="en" />
+   </tstamp>
+   <property name="distname" value="${projectName}"/>
+   <property name="distname" value="${projectName}"/>
+   <property name="main-class" value="TestJSP"/>
+	<property name="build-directory" value="build" />
+	<property name="builder" value="Wat3.14" />
+	
+	<target name="war" depends="">
+		<mkdir dir="${build-directory}" />
+		<delete file="${build-directory}/${warfile}" />
+		<war warfile="${build-directory}/${warfile}" webxml="${webxml}">
+			<classes dir="${bindir}" />
+			<fileset dir="${webdir}">
+				<!-- Need to exclude it since webxml is an attribute of the war tag above -->
+				<exclude name="WEB-INF/web.xml" />
+			</fileset>
+			<manifest>
+				<attribute name="Built-By" value="${builder}" />
+				<attribute name="Built-On" value="${build-info.current-date}" />
+				<attribute name="Built-At" value="${build-info.current-time}" />
+			</manifest>
+		</war>
+	</target>
+
+   <target name="init">
+      <mkdir dir="${bindir}"/>
+      <mkdir dir="${distdir}"/>
+   </target>
+
+	<path id="build.classpath">
+		<fileset dir="${libdir}">
+			<include name="**/*.jar" />
+        </fileset>
+	</path>
+<!--
+   <target name="build" depends="init">
+      <javac srcdir="${srcdir}"
+         destdir="${bindir}"
+         includes="**/*.java"
+         classpath="${libdir};./lib/tomcat-servlet-api-3.0.jar;./lib/my-project_2.9.1-1.0.jar; ./lib/log4j-1.2.17.jar"
+		 includeantruntime="false"
+         />
+   </target>
+-->
+
+   <target name="build" depends="init">
+      <javac srcdir="${srcdir}"
+         destdir="${bindir}"
+         includes="**/*.java"
+		 classpathref="build.classpath"
+		 includeantruntime="false"
+         />
+   </target>
+
+   <target name="jar" depends="build">
+      <jar destfile="${distdir}/${distname}.jar" basedir="${bindir}">
+         <manifest>
+            <attribute name="Main-Class" value="${main-class}"/>
+         </manifest>
+      </jar>
+   </target>
+
+   <target name="run" depends="jar">
+      <java jar="${distdir}/${distname}.jar" fork="true"/>
+   </target>
+
+
+   <target name="clean">
+      <delete dir="${bindir}"/>
+      <delete dir="${distdir}"/>
+   </target>
+</project>
