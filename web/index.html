@@ -10,27 +10,27 @@ var username = "null2"
 $(document).ready(function() {
     
     $('#usr_id').submit(function() {
-		$.get('SetUserId', 'joueurId='+this["joueurId"].value, function(data) {
-			alert("usr_id result: " + data);
-		});
-//        alert("usr_id: " + this["joueurId"].value);
+		$.get('SetUserId', 'joueurId='+this["joueurId"].value); //        alert("usr_id: " + this["joueurId"].value);
 		return false;
     });
 	
 	$('#updateSession').submit(function() {
 		$.get('GetUserId', "", function(data) {
-			if (data == "null") {
-				alert("datawot: " + data);
+			if ($.trim(data) == "null") {
 				$('#username').text("Vous n'etes pas logue");
 				$('#usr_id').show();
 			} else {
-				alert("data: " + data);
 				$('#username').text(data);
 				$('#usr_id').hide();
 			}
 //			$('#username').text(data);
 		});
 //		$('#username').text(username);
+		return false;
+	});
+
+	$('#logout').submit(function() {
+		$.get('SetUserId', 'joueurId=null');
 		return false;
 	});
 
@@ -45,12 +45,15 @@ $(document).ready(function() {
 </head>
 <body>
 <p id="username">null</p>
-<form id="usr_id" method="post" action="index.html">
+<form id="usr_id" method="post" action="#">
 username: <input type="text" name="joueurId">
 <input type="submit" value="OK" class="button" />
 </form>
 <form id="updateSession" method="post" action="#">
 <input type="submit" value="update" class="button" />
+</form>
+<form id="logout" method="post" action="#">
+<input type="submit" value="logout" class="button" />
 </form>
 </body>
 </html>

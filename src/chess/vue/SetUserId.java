@@ -19,7 +19,13 @@ public class SetUserId extends HttpServlet {
              
             java.io.PrintWriter out = reponse.getWriter();
 //            out.println("SomeUserId");
-            request.getSession().setAttribute("usr_id", request.getParameter("joueurId"));
+            String nu_usr_id = request.getParameter("joueurId");
+            if (nu_usr_id == "null") {
+                request.getSession().invalidate();
+            } else {
+//              request.getSession().setAttribute("usr_id", request.getParameter("joueurId"));
+                request.getSession().setAttribute("usr_id", nu_usr_id);
+            }
 
 //            out.println((usr_id == null) ? "null" : usr_id);
 //            out.println("ok.");

@@ -1,12 +1,13 @@
 package chess.web;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
+// import java.util.Collection;
+// import java.util.HashMap;
+import java.util.ArrayList;
+import chess.modele.Usager;
+//import java.util.List;
+//import java.util.Map;
+//import java.util.Map.Entry;
+//import java.util.Set;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
@@ -14,7 +15,7 @@ import javax.servlet.annotation.WebListener;
 public class ApplicationListener implements ServletContextListener {
 
 //     @Override // whatever?
-    public void contextInitialized(ServletContextEvent sce) {
+    public void contextInitialized(ServletContextEvent src) {
         /*
         Connexion.setUrl(sce.getServletContext().getInitParameter("urlBd"));
         try {
@@ -24,6 +25,7 @@ public class ApplicationListener implements ServletContextListener {
         }
         */
         /*
+
         List<Utilisateur> connectes = new LinkedList<Utilisateur>();
         Map<String, String> invitations = new HashMap<String,String>();
         Map<String, Partie> parties = new HashMap<String,Partie>();
@@ -32,6 +34,7 @@ public class ApplicationListener implements ServletContextListener {
         sce.getServletContext().setAttribute("invitations", invitations);
         sce.getServletContext().setAttribute("parties", parties);
         */
+        src.getServletContext().setAttribute("connectes", new ArrayList<Usager>());
     }
 
 //    @Override

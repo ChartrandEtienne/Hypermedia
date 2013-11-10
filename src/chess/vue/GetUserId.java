@@ -15,6 +15,8 @@ public class GetUserId extends HttpServlet {
 	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {
         reponse.setContentType("text/html");
 
+        getServletContext().log("what up");
+
         try {
             
             java.io.PrintWriter out = reponse.getWriter();
@@ -23,8 +25,8 @@ public class GetUserId extends HttpServlet {
             System.out.println("what the fuck2 ");
             
 
-            out.println(usr_id.toString());
-//            out.println((usr_id == null) ? "null" : usr_id.toString());
+//            out.println(usr_id.toString());
+            out.println((usr_id == null) ? "null" : usr_id.toString());
 
         } catch (Exception e) {
             System.out.println("exception: " + e.getMessage());

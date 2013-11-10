@@ -47,4 +47,8 @@
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 
+    <listener>
+        <listener-class>chess.web.ApplicationListener</listener-class>
+    </listener>
+
 </web-app>
