@@ -15,6 +15,17 @@ partie.html:
 
 ### SERVLET
 
+GetUserId:
+    renvoie le nom d'usager pour la session en cours, ou alors null pour une session non loguee.   
+
+SetUserId:
+    donne a la session en cours un usr_id. Contiendra le login un de ces jours. 
+
+GetListJoueurs:
+    donne la liste des joueurs connectes, avec les details d'invitations et tout et tout. 
+
+### SERVLET
+
 
 THINK
 

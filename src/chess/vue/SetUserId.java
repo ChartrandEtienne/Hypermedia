@@ -2,6 +2,8 @@ package chess.vue;
 
 import javax.servlet.http.*;
 import javax.servlet.*;
+import java.util.ArrayList;
+import chess.modele.Usager;
 
 public class SetUserId extends HttpServlet { 
 	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {
@@ -14,26 +16,36 @@ public class SetUserId extends HttpServlet {
 
 	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {
         reponse.setContentType("text/html");
-
         try {
              
             java.io.PrintWriter out = reponse.getWriter();
 //            out.println("SomeUserId");
             String nu_usr_id = request.getParameter("joueurId");
-            if (nu_usr_id == "null") {
+            getServletContext().log("req: " + nu_usr_id);
+
+/*
+            if (nu_usr_id.equals("UNLOG")) {
                 request.getSession().invalidate();
+                getServletContext().log("invalidate: " + nu_usr_id);
             } else {
+            */
 //              request.getSession().setAttribute("usr_id", request.getParameter("joueurId"));
-                request.getSession().setAttribute("usr_id", nu_usr_id);
-            }
+            request.getSession().setAttribute("usr_id", nu_usr_id);
+            getServletContext().log("what the fuck 314: " + nu_usr_id);
+            ArrayList<Usager> connectes = (ArrayList<Usager>)getServletContext().getAttribute("connectes");
+            getServletContext().log("what the fuck suite: " + connectes.toString());
+            Usager usr = new Usager(nu_usr_id);
+            getServletContext().log("what the fuck suite suite: " + usr.toString());
+            connectes.add(usr);
 
 //            out.println((usr_id == null) ? "null" : usr_id);
 //            out.println("ok.");
-            out.println("ok: " + request.getAttribute("joueurId"));
-            System.out.println("what the fuck");
+//
+//            ArrayList<Usager> connectes = (ArrayList<Usager>)getServletContext().getAttribute("connectes");
+//            Usager usr = new Usager(nu_usr_id);
 
         } catch (Exception e) {
-            System.out.println("exception: " + e.getMessage());
+            getServletContext().log("exception dans SetUsrId: " + e.getMessage());
         }
     }
 }

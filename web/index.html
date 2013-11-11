@@ -5,34 +5,60 @@
 
 <script type="text/javascript">
 
-var username = "null2"
+var username = "UNLOG2"
 
 $(document).ready(function() {
+
+	$('#logout').hide();
     
     $('#usr_id').submit(function() {
 		$.get('SetUserId', 'joueurId='+this["joueurId"].value); //        alert("usr_id: " + this["joueurId"].value);
+		updateAll();
 		return false;
     });
-	
-	$('#updateSession').submit(function() {
+
+	$('#logout').submit(function() {
+		$.get('Unlog');
+		updateAll();		
+		return false;
+	});
+
+	function displayJoueurs() {
+		$.get('GetListJoueurs', "", function(data) {
+			$('#listeUsagers').html(data);
+			
+		});
+	}	
+
+	function updateSession() {
 		$.get('GetUserId', "", function(data) {
-			if ($.trim(data) == "null") {
+			if ($.trim(data) == "UNLOG") {
+				$('#logout').hide();
 				$('#username').text("Vous n'etes pas logue");
-				$('#usr_id').show();
+//				$('#usr_id').show();
+				$('#tableLogin').show();
 			} else {
+				$('#logout').show();
 				$('#username').text(data);
-				$('#usr_id').hide();
+//				$('#usr_id').hide();
+				$('#tableLogin').hide();
 			}
 //			$('#username').text(data);
 		});
 //		$('#username').text(username);
 		return false;
-	});
+	}
 
-	$('#logout').submit(function() {
-		$.get('SetUserId', 'joueurId=null');
+
+	function updateAll() {
+		updateSession();
+		displayJoueurs();
 		return false;
-	});
+	}
+
+	window.setInterval(updateAll, 4000);
+
+
 
 });
 
@@ -45,15 +71,28 @@ $(document).ready(function() {
 </head>
 <body>
 <p id="username">null</p>
+<p>
+<table id="tableLogin">
 <form id="usr_id" method="post" action="#">
-username: <input type="text" name="joueurId">
-<input type="submit" value="OK" class="button" />
+<tr><td>username: </td><td><input type="text" name="joueurId"></td></tr>
+<tr><td><input type="submit" value="OK" class="button" /></td></tr>
 </form>
+</table>
+</p>
+<!--
 <form id="updateSession" method="post" action="#">
 <input type="submit" value="update" class="button" />
 </form>
+-->
+<p>
+<table id="tableLogout">
+<tr><td>
 <form id="logout" method="post" action="#">
 <input type="submit" value="logout" class="button" />
 </form>
+</td><tr></table>
+</p>
+<p id="listeUsagers">
+</p>
 </body>
 </html>

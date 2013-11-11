@@ -2,7 +2,6 @@
 	<servlet>
 		<servlet-name>InitSalon</servlet-name>
 		<servlet-class>chess.vue.InitSalon</servlet-class>
-<!--		<jsp-file>/InitSalon.jsp</jsp-file> je suis un CON -->
 	</servlet>
 
 	<servlet-mapping>
@@ -13,7 +12,6 @@
 	<servlet>
 		<servlet-name>GetUserId</servlet-name>
 		<servlet-class>chess.vue.GetUserId</servlet-class>
-<!--		<jsp-file>/GetUserId.jsp</jsp-file> je suis un CON -->
 	</servlet>
 
 	<servlet-mapping>
@@ -24,12 +22,31 @@
 	<servlet>
 		<servlet-name>SetUserId</servlet-name>
 		<servlet-class>chess.vue.SetUserId</servlet-class>
-<!--		<jsp-file>/SetUserId.jsp</jsp-file> je suis un CON -->
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>SetUserId</servlet-name>
 		<url-pattern>/SetUserId</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetListJoueurs</servlet-name>
+		<servlet-class>chess.vue.GetListJoueurs</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetListJoueurs</servlet-name>
+		<url-pattern>/GetListJoueurs</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Unlog</servlet-name>
+		<servlet-class>chess.vue.Unlog</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Unlog</servlet-name>
+		<url-pattern>/Unlog</url-pattern>
 	</servlet-mapping>
 
 <!--
@@ -48,6 +65,7 @@
     </welcome-file-list>
 
     <listener>
+        <listener-class>chess.web.SessionListener</listener-class>
         <listener-class>chess.web.ApplicationListener</listener-class>
     </listener>
 

@@ -16,6 +16,8 @@ public class ApplicationListener implements ServletContextListener {
 
 //     @Override // whatever?
     public void contextInitialized(ServletContextEvent src) {
+
+        src.getServletContext().log("CONTEXT INITIALIZED");
         /*
         Connexion.setUrl(sce.getServletContext().getInitParameter("urlBd"));
         try {

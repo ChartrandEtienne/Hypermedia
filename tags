@@ -4,31 +4,55 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ApplicationListener	src/chess/web/ApplicationListener.java	/^public class ApplicationListener implements ServletContextListener {$/;"	c
+GetListJoueurs	src/chess/vue/GetListJoueurs.java	/^public class GetListJoueurs extends HttpServlet { $/;"	c
+GetUserId	src/chess/vue/GetUserId.java	/^public class GetUserId extends HttpServlet { $/;"	c
 InitSalon	src/chess/vue/InitSalon.java	/^public class InitSalon extends HttpServlet { $/;"	c
 JetpackLikesMessageListener	web/WEB-INF/.page.html	/^			function JetpackLikesMessageListener( event ) {$/;"	f
 JetpackLikesWidgetQueueHandler	web/WEB-INF/.page.html	/^			function JetpackLikesWidgetQueueHandler() {$/;"	f
 JetpackLikespostMessage	web/WEB-INF/.page.html	/^			function JetpackLikespostMessage( message, target ) {$/;"	f
-Simple	src/chess/vue/Simple.java	/^public class Simple extends HttpServlet { $/;"	c
-TestJSP	src/chess/vue/TestJSP.java	/^public class TestJSP extends HttpServlet { $/;"	c
-Usager	src/chess/modele/Usager.java	/^    public Usager(String id) {$/;"	m	class:Usager
+SessionListener	src/chess/web/SessionListener.java	/^public class SessionListener implements HttpSessionListener {$/;"	c
+SetUserId	src/chess/vue/SetUserId.java	/^public class SetUserId extends HttpServlet { $/;"	c
+Unlog	src/chess/vue/Unlog.java	/^public class Unlog extends HttpServlet { $/;"	c
+Usager	src/chess/modele/Usager.java	/^    public Usager(String _id) {$/;"	m	class:Usager
 Usager	src/chess/modele/Usager.java	/^public class Usager {$/;"	c
 aInvite	src/chess/modele/Usager.java	/^    private ArrayList<Usager> aInvite;$/;"	f	class:Usager	file:
 addLoadEvent	web/WEB-INF/.page.html	/^function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}$/;"	f
 chess.modele	src/chess/modele/Usager.java	/^package chess.modele;$/;"	p
+chess.vue	src/chess/vue/GetListJoueurs.java	/^package chess.vue;$/;"	p
+chess.vue	src/chess/vue/GetUserId.java	/^package chess.vue;$/;"	p
 chess.vue	src/chess/vue/InitSalon.java	/^package chess.vue;$/;"	p
-chess.vue	src/chess/vue/Simple.java	/^package chess.vue;$/;"	p
-chess.vue	src/chess/vue/TestJSP.java	/^package chess.vue;$/;"	p
+chess.vue	src/chess/vue/SetUserId.java	/^package chess.vue;$/;"	p
+chess.vue	src/chess/vue/Unlog.java	/^package chess.vue;$/;"	p
+chess.web	src/chess/web/ApplicationListener.java	/^package chess.web;$/;"	p
+chess.web	src/chess/web/SessionListener.java	/^package chess.web;$/;"	p
+contextDestroyed	src/chess/web/ApplicationListener.java	/^    public void contextDestroyed(ServletContextEvent sce) {$/;"	m	class:ApplicationListener
+contextInitialized	src/chess/web/ApplicationListener.java	/^    public void contextInitialized(ServletContextEvent src) {$/;"	m	class:ApplicationListener
+displayJoueurs	web/index.html	/^	function displayJoueurs() {$/;"	f
+doGet	src/chess/vue/GetListJoueurs.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:GetListJoueurs
+doGet	src/chess/vue/GetUserId.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:GetUserId
 doGet	src/chess/vue/InitSalon.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:InitSalon
-doGet	src/chess/vue/Simple.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:Simple
-doGet	src/chess/vue/TestJSP.java	/^	public void doGet(HttpServletRequest requete, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:TestJSP
+doGet	src/chess/vue/SetUserId.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:SetUserId
+doGet	src/chess/vue/Unlog.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:Unlog
+doPost	src/chess/vue/GetListJoueurs.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:GetListJoueurs
+doPost	src/chess/vue/GetUserId.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:GetUserId
 doPost	src/chess/vue/InitSalon.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:InitSalon
-doPost	src/chess/vue/Simple.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:Simple
-getId	src/chess/modele/Usager.java	/^    public getId() {$/;"	m	class:Usager
+doPost	src/chess/vue/SetUserId.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:SetUserId
+doPost	src/chess/vue/Unlog.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:Unlog
+getId	src/chess/modele/Usager.java	/^    public String getId() {$/;"	m	class:Usager
 getInvitations	src/chess/modele/Usager.java	/^    public ArrayList<Usager> getInvitations() {$/;"	m	class:Usager
 id	src/chess/modele/Usager.java	/^    private String id;$/;"	f	class:Usager	file:
+processRequest	src/chess/vue/GetListJoueurs.java	/^	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {$/;"	m	class:GetListJoueurs
+processRequest	src/chess/vue/GetUserId.java	/^	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {$/;"	m	class:GetUserId
 processRequest	src/chess/vue/InitSalon.java	/^	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {$/;"	m	class:InitSalon
-processRequest	src/chess/vue/Simple.java	/^	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {$/;"	m	class:Simple
+processRequest	src/chess/vue/SetUserId.java	/^	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {$/;"	m	class:SetUserId
+processRequest	src/chess/vue/Unlog.java	/^	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {$/;"	m	class:Unlog
+sessionCreated	src/chess/web/SessionListener.java	/^    public void sessionCreated(HttpSessionEvent e) {$/;"	m	class:SessionListener
+sessionDestroyed	src/chess/web/SessionListener.java	/^    public void sessionDestroyed(HttpSessionEvent e) {$/;"	m	class:SessionListener
 supprimerInvivations	src/chess/modele/Usager.java	/^    public void supprimerInvivations() {$/;"	m	class:Usager
+toString	src/chess/modele/Usager.java	/^    public String toString() {$/;"	m	class:Usager
+updateAll	web/index.html	/^	function updateAll() {$/;"	f
+updateSession	web/index.html	/^	function updateSession() {$/;"	f
 wpcomQuantcastPixel	web/WEB-INF/.page.html	/^function wpcomQuantcastPixel( labels, options ) {$/;"	f
 wpcom_adclk_click	web/WEB-INF/.page.html	/^		function wpcom_adclk_click() {$/;"	f
 wpcom_adclk_hover_no	web/WEB-INF/.page.html	/^			function wpcom_adclk_hover_no() { wpcom_adclk_hovering = false; }$/;"	f
