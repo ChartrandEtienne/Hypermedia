@@ -23,12 +23,8 @@ public class GetUserId extends HttpServlet {
             java.io.PrintWriter out = reponse.getWriter();
 //            out.println("SomeUserId");
             Object usr_id = request.getSession().getAttribute("usr_id");
-
 //            System.out.println("what the fuck2 ");
-            String usr_id_string = (usr_id == null) ? "UNLOG" : usr_id.toString();
-
             
-            getServletContext().log("GetUserId usr_id: " + usr_id_string);
 
 //            out.println(usr_id.toString());
             out.println((usr_id == null) ? "UNLOG" : usr_id.toString());

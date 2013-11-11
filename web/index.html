@@ -9,7 +9,8 @@ var username = "UNLOG2"
 
 $(document).ready(function() {
 
-	$('#logout').hide();
+    $('#tableLogout').hide();
+
     
     $('#usr_id').submit(function() {
 		$.get('SetUserId', 'joueurId='+this["joueurId"].value); //        alert("usr_id: " + this["joueurId"].value);
@@ -28,20 +29,28 @@ $(document).ready(function() {
 			$('#listeUsagers').html(data);
 			
 		});
+        return false;
 	}	
+
+    function setInviterListener() {
+        $('.inviter').click(function() {
+            alert("id: " + $(this).attr("id"));
+        });
+    }
 
 	function updateSession() {
 		$.get('GetUserId', "", function(data) {
 			if ($.trim(data) == "UNLOG") {
-				$('#logout').hide();
+                $('#tableLogout').hide();
 				$('#username').text("Vous n'etes pas logue");
 //				$('#usr_id').show();
 				$('#tableLogin').show();
 			} else {
-				$('#logout').show();
+                $('#tableLogout').show();
 				$('#username').text(data);
 //				$('#usr_id').hide();
 				$('#tableLogin').hide();
+                setInviterListener();
 			}
 //			$('#username').text(data);
 		});

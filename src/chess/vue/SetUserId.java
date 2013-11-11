@@ -3,6 +3,7 @@ package chess.vue;
 import javax.servlet.http.*;
 import javax.servlet.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import chess.modele.Usager;
 
 public class SetUserId extends HttpServlet { 
@@ -32,11 +33,11 @@ public class SetUserId extends HttpServlet {
 //              request.getSession().setAttribute("usr_id", request.getParameter("joueurId"));
             request.getSession().setAttribute("usr_id", nu_usr_id);
             getServletContext().log("what the fuck 314: " + nu_usr_id);
-            ArrayList<Usager> connectes = (ArrayList<Usager>)getServletContext().getAttribute("connectes");
+            HashMap<String, Usager> connectes = (HashMap<String, Usager>)getServletContext().getAttribute("connectes");
             getServletContext().log("what the fuck suite: " + connectes.toString());
             Usager usr = new Usager(nu_usr_id);
             getServletContext().log("what the fuck suite suite: " + usr.toString());
-            connectes.add(usr);
+            connectes.put(nu_usr_id, usr);
 
 //            out.println((usr_id == null) ? "null" : usr_id);
 //            out.println("ok.");

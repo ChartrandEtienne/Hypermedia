@@ -3,6 +3,7 @@ package chess.vue;
 import javax.servlet.http.*;
 import javax.servlet.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import chess.modele.Usager;
 
 public class Unlog extends HttpServlet { 
@@ -20,35 +21,16 @@ public class Unlog extends HttpServlet {
 
             getServletContext().log("INVALIDATE");
             getServletContext().log("invalidate: " + request.getSession().getAttribute("usr_id"));
-
-            ArrayList<Usager> connectes = (ArrayList<Usager>)getServletContext().getAttribute("connectes");
-
+            HashMap<String, Usager> connectes = (HashMap<String, Usager>)request.getSession().getServletContext().getAttribute("connectes");
             String usr_id = (request.getSession().getAttribute("usr_id") == null) ? "" : request.getSession().getAttribute("usr_id").toString();
+//            String usr_id = "xkcd";
+            connectes.remove(usr_id);
+            getServletContext().log("CONNECTES: " + connectes.toString());
+;
 
-            getServletContext().log("INVALIDATE usr_id: " + usr_id);
 
-            for (int i = 0; i < connectes.size(); i++) {
-
-                getServletContext().log("iter 1");
-                if (connectes.get(i).getId().equals(usr_id)) {
-
-                    getServletContext().log("TROUVE");
-                    connectes.remove(i);
-                }
-            }
 
             request.getSession().invalidate();
-            /*
-            if (request.getSession().getAttribute("usr_id") == null) {
-                getServletContext().log("NULL NULL NULL");
-            }
-
-            HttpSession session = request.getSession();
-            if (session!=null) {
-                session.invalidate();
-            }
-            // request.getSession().invalidate();
-            */
 
 
         } catch (Exception e) {
