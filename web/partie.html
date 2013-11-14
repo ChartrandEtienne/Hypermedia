@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>chess</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<script src="js/jquery.js"></script>
+
+<script type="text/javascript">
+
+var username = "UNLOG2"
+
+$(document).ready(function() {
+
+	function updateSession() {
+		$.get('GetUserId', "antiCache='" + (new Date().getTime()) + "'" , function(data) {
+//            alert("GetUserId: " + data);
+			if ($.trim(data) == "UNLOG") {
+				$('#username').text("Vous n'etes pas logue");
+			} else {
+				$('#username').text(data);
+            }
+        });
+        return false;
+    }
+
+    function afficherPartie() {
+		$.get('AfficherPartie', "antiCache='" + (new Date().getTime()) + "'" , function(data) {
+//            alert("AfficherPartie: " + data);
+            $('#echiquier').html(data);
+            $('.case').click(function() {
+                alert("case: (" + $(this).attr("posx") + ", " + $(this).attr("posy") + ")");
+            });
+        });
+    }
+
+	function updateAll() {
+		updateSession();
+		afficherPartie();
+		return false;
+	}
+
+    updateAll;
+
+	$('#refresh').submit(updateAll);
+
+});
+
+</script>
+
+</head>
+
+<body>
+<p id="username">null</p>
+<p id="echiquier">
+</p>
+<form id="refresh" method="post" action="#">
+<input type="submit" value="refresh" class="button" />
+</body>
+</html>

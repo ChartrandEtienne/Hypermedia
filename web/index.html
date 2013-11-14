@@ -1,5 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>chess</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
 <script src="js/jquery.js"></script>
 
@@ -24,22 +27,45 @@ $(document).ready(function() {
 		return false;
 	});
 
+	$('#refresh').submit(updateAll);
+
 	function displayJoueurs() {
-		$.get('GetListJoueurs', "", function(data) {
+//		alert("getListJoueurs");
+		$.get('GetListJoueurs', "antiCache='" + (new Date().getTime()) + "'", function(data) {
+//			alert("post-getListJoueurs: " + data);
 			$('#listeUsagers').html(data);
+//			$('.inviter').click(function() { alert("fuckFUCK"); });
+			$('.accepter').click(function() {
+//                alert("idAccepter: " + $(this).attr("id"));
+                $.get('AccepterPartie', 'a_accepter=' + $(this).attr('id'));
+//                return false;
+            });
+			$('.inviter').click(function() {
+//                alert("id: " + $(this).attr("id"));
+                $.get('InviterJoueur', 'a_inviter=' + $(this).attr('id'));
+//                return false;
+            });
 			
 		});
         return false;
 	}	
 
+/*
     function setInviterListener() {
         $('.inviter').click(function() {
             alert("id: " + $(this).attr("id"));
+			return false;
         });
     }
 
+	function onInviterClick() {
+        alert("id: " + $(this).attr("id"));
+	}
+*/
+
 	function updateSession() {
-		$.get('GetUserId', "", function(data) {
+		$.get('GetUserId', "antiCache='" + (new Date().getTime()) + "'" , function(data) {
+//			alert("GetUserId: " + data);
 			if ($.trim(data) == "UNLOG") {
                 $('#tableLogout').hide();
 				$('#username').text("Vous n'etes pas logue");
@@ -50,7 +76,6 @@ $(document).ready(function() {
 				$('#username').text(data);
 //				$('#usr_id').hide();
 				$('#tableLogin').hide();
-                setInviterListener();
 			}
 //			$('#username').text(data);
 		});
@@ -62,10 +87,13 @@ $(document).ready(function() {
 	function updateAll() {
 		updateSession();
 		displayJoueurs();
+//		$('.inviter').click(onInviterClick());
 		return false;
 	}
 
-	window.setInterval(updateAll, 4000);
+	updateAll;
+
+//	window.setInterval(updateAll, 4000);
 
 
 
@@ -73,11 +101,8 @@ $(document).ready(function() {
 
 </script>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>chess</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 </head>
+
 <body>
 <p id="username">null</p>
 <p>
@@ -103,5 +128,7 @@ $(document).ready(function() {
 </p>
 <p id="listeUsagers">
 </p>
+<form id="refresh" method="post" action="#">
+<input type="submit" value="refresh" class="button" />
 </body>
 </html>

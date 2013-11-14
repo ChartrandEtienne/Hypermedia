@@ -4,6 +4,7 @@ package chess.web;
 import java.util.HashMap;
 import java.util.ArrayList;
 import chess.modele.Usager;
+import chess.modele.Partie;
 //import java.util.List;
 //import java.util.Map;
 //import java.util.Map.Entry;
@@ -37,6 +38,7 @@ public class ApplicationListener implements ServletContextListener {
         sce.getServletContext().setAttribute("parties", parties);
         */
         src.getServletContext().setAttribute("connectes", new HashMap<String, Usager>());
+        src.getServletContext().setAttribute("parties", new HashMap<String, Partie>());
     }
 
 //    @Override

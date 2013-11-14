@@ -49,6 +49,36 @@
 		<url-pattern>/Unlog</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>AccepterPartie</servlet-name>
+		<servlet-class>chess.vue.AccepterPartie</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AccepterPartie</servlet-name>
+		<url-pattern>/AccepterPartie</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>InviterJoueur</servlet-name>
+		<servlet-class>chess.vue.InviterJoueur</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>InviterJoueur</servlet-name>
+		<url-pattern>/InviterJoueur</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AfficherPartie</servlet-name>
+		<servlet-class>chess.vue.AfficherPartie</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AfficherPartie</servlet-name>
+		<url-pattern>/AfficherPartie</url-pattern>
+	</servlet-mapping>
+
 <!--
 	<servlet>
 		<servlet-name>Simple</servlet-name>
