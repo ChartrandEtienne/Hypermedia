@@ -50,6 +50,16 @@
 	</servlet-mapping>
 
 	<servlet>
+		<servlet-name>JouerCoup</servlet-name>
+		<servlet-class>chess.vue.JouerCoup</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>JouerCoup</servlet-name>
+		<url-pattern>/JouerCoup</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
 		<servlet-name>AccepterPartie</servlet-name>
 		<servlet-class>chess.vue.AccepterPartie</servlet-class>
 	</servlet>

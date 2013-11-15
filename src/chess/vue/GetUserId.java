@@ -28,7 +28,7 @@ public class GetUserId extends HttpServlet {
 
 //            out.println(usr_id.toString());
             out.println((usr_id == null) ? "UNLOG" : usr_id.toString());
-            getServletContext().log("GetUserId: " + ((usr_id == null) ? "UNLOG" : usr_id.toString()));
+//            getServletContext().log("GetUserId: " + ((usr_id == null) ? "UNLOG" : usr_id.toString()));
 
         } catch (Exception e) {
 //            System.out.println("exception: " + e.getMessage());

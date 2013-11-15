@@ -26,18 +26,29 @@ public class AfficherPartie extends HttpServlet {
             
             HashMap<String, Partie> parties = (HashMap<String, Partie>)getServletContext().getAttribute("parties");
 
-            getServletContext().log("AfficherPartie parties: " + parties.toString());
+//            getServletContext().log("AfficherPartie parties: " + parties.toString());
 
             String usr_id = (request.getSession().getAttribute("usr_id") == null) ? "UNLOG" : request.getSession().getAttribute("usr_id").toString();
+
+            java.io.PrintWriter out = reponse.getWriter();
 
             Partie partie_en_cours = parties.get(usr_id);
             if (partie_en_cours == null) {
                 getServletContext().log("partie_en_cours null; usr_id = " + usr_id);
+                return;
             }
 
             Echiquier ech = partie_en_cours.getEchiquier();
+            if (ech == null) {
+                out.println("");  
+                return;
+            }
+            
+            String couleur = (partie_en_cours.getUsager1().getId() == usr_id) ? "blanc" : "noir";
 
-            java.io.PrintWriter out = reponse.getWriter();
+            out.println("<p id='couleur'>couleur: " + couleur + "</p><p>tour: " + ech.getTour() + "</p>");
+
+            
 
             out.println("<table id='tableDeJeu' border='1'>");
             for (int i=0; i<8;i++) {
@@ -45,9 +56,9 @@ public class AfficherPartie extends HttpServlet {
                 for (int j=0; j<8; j++) {
                     Piece piece = ech.get(i, j); 
                     if (piece != null) {
-                        out.println("<td><div class='case' posx = '" + i + "' posy='" + j + "'>" + piece.afficherPiece() + "</div>");
+                        out.println("<td><div class='case' posx = '" + j + "' posy='" + i + "'>" + piece.afficherPiece() + "</div>");
                     } else {
-                        out.println("<td><div class='case' posx = '" + i + "' posy='" + j + "'>0</div>");
+                        out.println("<td><div class='case' posx = '" + j + "' posy='" + i + "'>0</div>");
                     }
                     out.println("</td>");
                 }

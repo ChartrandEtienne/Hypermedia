@@ -8,7 +8,7 @@ public  abstract class Piece {
 
    String couleur;
     public String afficherPiece() {
-        return "p " + ((couleur.equals("noir")) ? "n" : "y");
+        return "p " + ((couleur.equals("noir")) ? "n" : "b");
     }
    public abstract boolean validerDep(Position posDepart, Position posFinal);
    public abstract boolean manger(Position posDepart, Position posFinal);

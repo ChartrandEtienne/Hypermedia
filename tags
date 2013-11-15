@@ -21,6 +21,8 @@ InviterJoueur	src/chess/vue/InviterJoueur.java	/^public class InviterJoueur exte
 JetpackLikesMessageListener	web/WEB-INF/.page.html	/^			function JetpackLikesMessageListener( event ) {$/;"	f
 JetpackLikesWidgetQueueHandler	web/WEB-INF/.page.html	/^			function JetpackLikesWidgetQueueHandler() {$/;"	f
 JetpackLikespostMessage	web/WEB-INF/.page.html	/^			function JetpackLikespostMessage( message, target ) {$/;"	f
+JouerCoup	src/chess/vue/JouerCoup.java	/^public class JouerCoup extends HttpServlet { $/;"	c
+Partie	src/chess/modele/Partie.java	/^    public Partie() {$/;"	m	class:Partie
 Partie	src/chess/modele/Partie.java	/^    public Partie(Usager _a, Usager _b) {$/;"	m	class:Partie
 Partie	src/chess/modele/Partie.java	/^public class Partie {$/;"	c
 Piece	src/chess/modele/Piece.java	/^public  abstract class Piece {$/;"	c
@@ -45,7 +47,15 @@ Utilisateur	src/chess/modele/Utilisateur.java	/^        public Utilisateur(Strin
 Utilisateur	src/chess/modele/Utilisateur.java	/^public class Utilisateur {$/;"	c
 aInvite	src/chess/modele/Usager.java	/^    private ArrayList<Usager> aInvite;$/;"	f	class:Usager	file:
 addLoadEvent	web/WEB-INF/.page.html	/^function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}$/;"	f
+afficherPartie	web/index.html	/^    function afficherPartie() {$/;"	f
 afficherPartie	web/partie.html	/^    function afficherPartie() {$/;"	f
+afficherPiece	src/chess/modele/Cavalier.java	/^    public String afficherPiece() {$/;"	m	class:Cavalier
+afficherPiece	src/chess/modele/Fou.java	/^    public String afficherPiece() {$/;"	m	class:Fou
+afficherPiece	src/chess/modele/Piece.java	/^    public String afficherPiece() {$/;"	m	class:Piece
+afficherPiece	src/chess/modele/Pion.java	/^    public String afficherPiece() {$/;"	m	class:Pion
+afficherPiece	src/chess/modele/Reine.java	/^    public String afficherPiece() {$/;"	m	class:Reine
+afficherPiece	src/chess/modele/Roi.java	/^    public String afficherPiece() {$/;"	m	class:Roi
+afficherPiece	src/chess/modele/Tour.java	/^    public String afficherPiece() {$/;"	m	class:Tour
 ajouterInvite	src/chess/modele/Usager.java	/^    public void ajouterInvite(Usager invite) {$/;"	m	class:Usager
 chess.modele	src/chess/modele/Cavalier.java	/^package chess.modele;$/;"	p
 chess.modele	src/chess/modele/Echiquier.java	/^package chess.modele;$/;"	p
@@ -65,6 +75,7 @@ chess.vue	src/chess/vue/GetListJoueurs.java	/^package chess.vue;$/;"	p
 chess.vue	src/chess/vue/GetUserId.java	/^package chess.vue;$/;"	p
 chess.vue	src/chess/vue/InitSalon.java	/^package chess.vue;$/;"	p
 chess.vue	src/chess/vue/InviterJoueur.java	/^package chess.vue;$/;"	p
+chess.vue	src/chess/vue/JouerCoup.java	/^package chess.vue;$/;"	p
 chess.vue	src/chess/vue/SetUserId.java	/^package chess.vue;$/;"	p
 chess.vue	src/chess/vue/Unlog.java	/^package chess.vue;$/;"	p
 chess.web	src/chess/web/ApplicationListener.java	/^package chess.web;$/;"	p
@@ -75,6 +86,7 @@ contextInitialized	src/chess/web/ApplicationListener.java	/^    public void cont
 couleur	src/chess/modele/Piece.java	/^   String couleur;$/;"	f	class:Piece
 courriel	src/chess/modele/Utilisateur.java	/^	String courriel;$/;"	f	class:Utilisateur
 deplacer	src/chess/modele/Echiquier.java	/^	public boolean deplacer( Position posB)$/;"	m	class:Echiquier
+deplacer2	src/chess/modele/Echiquier.java	/^    public boolean deplacer2(Position debut, Position fin, couleur) {$/;"	m	class:Echiquier
 displayJoueurs	web/index.html	/^	function displayJoueurs() {$/;"	f
 doGet	src/chess/vue/AccepterPartie.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:AccepterPartie
 doGet	src/chess/vue/AfficherPartie.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:AfficherPartie
@@ -82,6 +94,7 @@ doGet	src/chess/vue/GetListJoueurs.java	/^	public void doGet(HttpServletRequest 
 doGet	src/chess/vue/GetUserId.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:GetUserId
 doGet	src/chess/vue/InitSalon.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:InitSalon
 doGet	src/chess/vue/InviterJoueur.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:InviterJoueur
+doGet	src/chess/vue/JouerCoup.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:JouerCoup
 doGet	src/chess/vue/SetUserId.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:SetUserId
 doGet	src/chess/vue/Unlog.java	/^	public void doGet(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:Unlog
 doPost	src/chess/vue/AccepterPartie.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:AccepterPartie
@@ -90,13 +103,16 @@ doPost	src/chess/vue/GetListJoueurs.java	/^	public void doPost(HttpServletReques
 doPost	src/chess/vue/GetUserId.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:GetUserId
 doPost	src/chess/vue/InitSalon.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:InitSalon
 doPost	src/chess/vue/InviterJoueur.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:InviterJoueur
+doPost	src/chess/vue/JouerCoup.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:JouerCoup
 doPost	src/chess/vue/SetUserId.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:SetUserId
 doPost	src/chess/vue/Unlog.java	/^	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {$/;"	m	class:Unlog
+echiquier	src/chess/modele/Partie.java	/^    private Echiquier echiquier;$/;"	f	class:Partie	file:
 equals	src/chess/modele/Utilisateur.java	/^        public boolean equals(Object x)$/;"	m	class:Utilisateur
 get	src/chess/modele/Echiquier.java	/^        public Piece get(int i, int j)$/;"	m	class:Echiquier
 getColonne	src/chess/modele/Position.java	/^	public int getColonne() {$/;"	m	class:Position
 getCouleur	src/chess/modele/Piece.java	/^    public String getCouleur() {$/;"	m	class:Piece
 getCourriel	src/chess/modele/Utilisateur.java	/^    public String getCourriel() {$/;"	m	class:Utilisateur
+getEchiquier	src/chess/modele/Partie.java	/^    public Echiquier getEchiquier() {$/;"	m	class:Partie
 getId	src/chess/modele/Usager.java	/^    public String getId() {$/;"	m	class:Usager
 getId	src/chess/modele/Utilisateur.java	/^	public int getId() {$/;"	m	class:Utilisateur
 getInvitations	src/chess/modele/Usager.java	/^    public ArrayList<Usager> getInvitations() {$/;"	m	class:Usager
@@ -138,6 +154,7 @@ processRequest	src/chess/vue/GetListJoueurs.java	/^	public void processRequest(H
 processRequest	src/chess/vue/GetUserId.java	/^	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {$/;"	m	class:GetUserId
 processRequest	src/chess/vue/InitSalon.java	/^	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {$/;"	m	class:InitSalon
 processRequest	src/chess/vue/InviterJoueur.java	/^	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {$/;"	m	class:InviterJoueur
+processRequest	src/chess/vue/JouerCoup.java	/^	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {$/;"	m	class:JouerCoup
 processRequest	src/chess/vue/SetUserId.java	/^	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {$/;"	m	class:SetUserId
 processRequest	src/chess/vue/Unlog.java	/^	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {$/;"	m	class:Unlog
 selectionnee	src/chess/modele/Echiquier.java	/^	public void selectionnee(Position pos)$/;"	m	class:Echiquier

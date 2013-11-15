@@ -25,9 +25,9 @@ public class GetListJoueurs extends HttpServlet {
         try {
             
             HashMap<String, Usager> connectes = (HashMap<String, Usager>)getServletContext().getAttribute("connectes");
-            getServletContext().log("connectes: " + connectes.toString());
+//            getServletContext().log("connectes: " + connectes.toString());
             HashMap<String, Partie> parties = (HashMap<String, Partie>)getServletContext().getAttribute("parties");
-            getServletContext().log("parties: " + parties.toString());
+//            getServletContext().log("parties: " + parties.toString());
 
             String usr_id = (request.getSession().getAttribute("usr_id") == null) ? "UNLOG" : request.getSession().getAttribute("usr_id").toString();
 

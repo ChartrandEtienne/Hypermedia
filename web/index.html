@@ -17,7 +17,7 @@ $(document).ready(function() {
     
     $('#usr_id').submit(function() {
 		$.get('SetUserId', 'joueurId='+this["joueurId"].value); //        alert("usr_id: " + this["joueurId"].value);
-		updateAll();
+//		updateAll();
 		return false;
     });
 
@@ -83,10 +83,33 @@ $(document).ready(function() {
 		return false;
 	}
 
+    function afficherPartie() {
+		$.get('AfficherPartie', "antiCache='" + (new Date().getTime()) + "'" , function(data) {
+//            alert("AfficherPartie: " + data);
+            $('#echiquier').html(data);
+            $('.case').click(function() {
+//                alert("case: (" + $(this).attr("posx") + ", " + $(this).attr("posy") + ")");
+				var posx = $(this).attr("posx");
+				var posy = $(this).attr("posy");
+				$('.case').off()
+				$('.case').click(function() {
+//					alert("casES: (" + $(this).attr("posx") + ", " + $(this).attr("posy") + "), (" + posx + ", " + posy + ")");
+//					$.get('JouerCoup', "debutx='" + posx + "' debuty='" + posy + "' finx='" + $(this).attr("posx") + "' finy='" + $(this).attr("posy") + "'");
+					$.get('JouerCoup', { debutx: posx, debuty: posy, finx: $(this).attr("posx"),finy: $(this).attr("posy")});
+//					alert("what fuck ::: " + "debutx='" + posx + "' debuty='" + posy + "' finx='" + $(this).attr("posx") + "' finy='" + $(this).attr("posy") + "'");
+					$('.case').off()
+					afficherPartie();
+				});
+			return false;	
+            });
+        });
+    }
+
 
 	function updateAll() {
 		updateSession();
 		displayJoueurs();
+		afficherPartie();
 //		$('.inviter').click(onInviterClick());
 		return false;
 	}
@@ -126,7 +149,11 @@ $(document).ready(function() {
 </form>
 </td><tr></table>
 </p>
+<h1>Liste des joueurs</h1>
 <p id="listeUsagers">
+</p>
+<h1>Echiquier</h1>
+<p id="echiquier">
 </p>
 <form id="refresh" method="post" action="#">
 <input type="submit" value="refresh" class="button" />
