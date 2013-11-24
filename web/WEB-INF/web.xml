@@ -1,4 +1,34 @@
 <web-app version="2.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xsi:schemalocation="http:/java.sun.com/dtd/web-app_2_3.dtd">
+    <context-param>
+        <description>La chaine du pilote JDBC utilisé pour se connecter à la BD.</description>
+        <param-name>piloteJdbc</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+
+    <context-param>
+        <description>L'URL de la BD pour les connexions JDBC.</description>
+        <param-name>urlBd</param-name>
+<!--        <param-value>jdbc:mysql://localhost/chess?user=root</param-value> -->
+        <param-value>jdbc:mysql://localhost/chess</param-value> 
+    </context-param>
+
+    <context-param>
+        <description>user de la BD pour les connexions JDBC.</description>
+        <param-name>user</param-name>
+        <param-value>root</param-value> 
+    </context-param>
+
+    <context-param>
+        <description>pwd de la BD pour les connexions JDBC.</description>
+        <param-name>password</param-name>
+        <param-value>access</param-value> 
+    </context-param>
+
+	<context-param>
+		<param-name>log4j-config</param-name>
+		<param-value>WEB-INF/log4j.xml</param-value>
+	</context-param>	
+
 	<servlet>
 		<servlet-name>InitSalon</servlet-name>
 		<servlet-class>chess.vue.InitSalon</servlet-class>

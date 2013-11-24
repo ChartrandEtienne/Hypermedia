@@ -8,7 +8,12 @@ import chess.modele.*;
 // import chess.modele.Usager;
 // import chess.modele.Partie;
 
+import org.apache.log4j.Logger;
+
 public class AfficherPartie extends HttpServlet { 
+
+    private static Logger logger = Logger.getLogger(AfficherPartie.class);
+
 	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {
         processRequest(request, reponse);
     }
@@ -19,6 +24,8 @@ public class AfficherPartie extends HttpServlet {
 
 	public void processRequest(HttpServletRequest request, HttpServletResponse reponse) {
         reponse.setContentType("text/html");
+
+        logger.info("LOGGER WHAT UP NIGGAS");
 
 //         getServletContext().log("what up");
 

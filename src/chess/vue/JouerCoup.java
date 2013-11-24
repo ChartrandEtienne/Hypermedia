@@ -5,8 +5,13 @@ import javax.servlet.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import chess.modele.*;
+import org.apache.log4j.Logger;
+
+
 
 public class JouerCoup extends HttpServlet { 
+
+    private static Logger logger = Logger.getLogger(JouerCoup.class);
 	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, java.io.IOException {
         processRequest(request, reponse);
     }
@@ -48,10 +53,17 @@ public class JouerCoup extends HttpServlet {
 
             Position fin = new Position(Integer.parseInt(finx), Integer.parseInt(finy));
 
-            getServletContext().log("debut: " + debut.toString());
-            getServletContext().log("fin: " + fin.toString());
+//            getServletContext().log("debut: " + debut.toString());
+//            getServletContext().log("fin: " + fin.toString());
+            logger.info("debut: " + debut.toString());
+            logger.info("fin: " + fin.toString());
 
-            getServletContext().log("deplacer2 log: " + en_cours.deplacer2(debut, fin, couleur));
+//            getServletContext().log("deplacer2 log: " + en_cours.deplacer2(debut, fin, couleur));
+            if (en_cours.deplacer3(debut, fin, couleur)) {
+                logger.info("coup confirme");
+            } else {
+                logger.info("coup invalide");
+            }
 
             // eventuellement: supprimer les invitation VERS les deux joueurs
             // alors qu'ils acceptent cette partie   

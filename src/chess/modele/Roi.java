@@ -6,10 +6,15 @@ public class Roi extends Piece {
 		this.couleur = couleur;
 	}
     public String afficherPiece() {
-        return "K " + ((couleur.equals("noir")) ? "n" : "y");
+        return "K " + ((couleur.equals("noir")) ? "n" : "b");
     }
 
 	@Override
+    
+	public boolean validerDep(Position debut, Position fin, Echiquier ech, String couleur) {
+        return validerDep(debut, fin);
+    }
+
 	public boolean validerDep(Position posDepart, Position posFinal) {
 		int diffColonne= posFinal.Colonne-posDepart.Colonne;
 		int diffLigne= posFinal.ligne-posDepart.ligne;

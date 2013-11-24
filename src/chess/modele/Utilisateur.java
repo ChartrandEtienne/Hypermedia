@@ -4,7 +4,7 @@ public class Utilisateur {
 	
 	int id;
 	String name;
-        String mdp;
+    String mdp;
 	String courriel;
         boolean connecte;
         boolean play;

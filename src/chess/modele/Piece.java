@@ -11,6 +11,11 @@ public  abstract class Piece {
         return "p " + ((couleur.equals("noir")) ? "n" : "b");
     }
    public abstract boolean validerDep(Position posDepart, Position posFinal);
+   // la majorite des pieces ont besoin de verifier si une autre piece est dans
+   // leur chemin avant d'avancer. 
+   // Je reprends donc la methode existante validerDep et je lui passe la grille
+   // pour les cas ou c'est necessaire
+   public abstract boolean validerDep(Position debut, Position fin, Echiquier ech, String couleur);
    public abstract boolean manger(Position posDepart, Position posFinal);
    public boolean validerEchec(Position posFinal)
    {
