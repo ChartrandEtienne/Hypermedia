@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
-<project name="Chess" default="build" basedir=".">
-   <property name="projectName" value="Chess"/>
+<project name="Linx" default="build" basedir=".">
+   <property name="projectName" value="Linx"/>
    <property name="srcdir" value="src"/>
    <property name="libdir" value="lib"/>
    <property name="bindir" value="bin"/>
